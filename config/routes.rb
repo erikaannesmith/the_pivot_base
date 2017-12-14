@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#create'
   resources :tweets, only: [:new, :create]
 
-	namespace :stores, as: :store, path: ":store" do
-		resources :items, only: [:index, :show]
-	end 
+  namespace :stores, as: :store, path: ":store" do
+    resources :items, only: [:index, :show]
+  end 
 
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   resources :users , only: [:new, :create, :edit, :update]
 
-	resources :stores, only: [:new, :create, :index]
+  resources :stores, only: [:new, :create, :index]
 
   get '/account/edit', to: 'users#edit', as: 'account_edit'
 
@@ -47,7 +47,9 @@ Rails.application.routes.draw do
   delete '/cart', :to => 'carts#destroy'
   resources :carts, only: [:index, :create, :destroy]
 
-	resources :categories, param: :slug, only: [:show]
+  resources :categories, param: :slug, only: [:show]
 
+  get  "/settings/developer", to: 'developer#new'
+  post "/settings/developer", to: 'developer#create'
 
 end

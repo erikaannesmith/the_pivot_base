@@ -12,12 +12,11 @@
           <a class="nav-link" href="/stores">My Stores</a>
         </li>
       </ul>
-		<div class="card-body">
-			<%@stores.each do |store|%>
-				byebug
-				<h4 class="card-title"><%=store.name%></h4>
-				<p class="card-text"><%=store.status%></p>
-		<% end %>
+    <div class="card-body">
+      <%@stores.each do |store|%>
+        <h4 class="card-title"><%=store.name%></h4>
+        <p class="card-text"><%=store.status%></p>
+    <% end %>
     </div>
-	</div>
-	</div>
+  </div>
+  </div>
