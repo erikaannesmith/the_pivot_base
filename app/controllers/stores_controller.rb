@@ -11,5 +11,9 @@ class StoresController < ApplicationController
   def create
     store = Store.create(name: params["store"]["name"], user: current_user)
     redirect_to dashboard_index_path
-  end 
-end 
+  end
+
+  def show
+    @store = Store.find_by_slug!(params[:id])
+  end
+end
