@@ -2,7 +2,7 @@ class Store < ApplicationRecord
   has_many   :items
   belongs_to :user
 
-  before_save :add_url
+  # before_save :add_url
 
   enum status: [ :pending, :active, :suspended ]
 
@@ -16,7 +16,7 @@ class Store < ApplicationRecord
     self.slug ||= name.parameterize
   end
 
-  def add_url
-    self.url = name.parameterize
-  end
+  # def add_url
+  #   self.url = name.parameterize
+  # end
 end
