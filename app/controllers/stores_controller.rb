@@ -15,5 +15,6 @@ class StoresController < ApplicationController
 
   def show
     @store = Store.find_by_slug!(params[:id])
+    redirect_to store_items_path(@store)
   end
 end
