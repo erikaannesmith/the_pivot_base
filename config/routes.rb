@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   resources :users , only: [:new, :create, :edit, :update]
 
   resources :stores, only: [:new, :create, :index, :show]
+  resources :stores, path: "", except: [:index, :new, :create, :show]
+  get '*id', to: 'stores#show'
 
   get '/account/edit', to: 'users#edit', as: 'account_edit'
 
