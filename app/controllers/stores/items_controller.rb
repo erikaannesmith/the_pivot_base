@@ -1,6 +1,7 @@
 class Stores::ItemsController < ApplicationController
 
   def index
+    binding.pry
     @store = Store.find_by_slug!(params['store'])
     @items = @store.items
   end
