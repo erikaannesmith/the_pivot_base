@@ -4,6 +4,7 @@ class Store < ApplicationRecord
 
   # before_save :add_url
 
+
   enum status: [ :pending, :active, :suspended ]
 
   before_validation :generate_slug
@@ -15,8 +16,4 @@ class Store < ApplicationRecord
   def generate_slug
     self.slug ||= name.parameterize
   end
-
-  # def add_url
-  #   self.url = name.parameterize
-  # end
 end

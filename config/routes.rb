@@ -41,7 +41,6 @@ Rails.application.routes.draw do
 
   get '/cart', :to => 'carts#index', :as => 'cart'
 
-
   resources :carts, only: [:index, :create, :destroy]
 
   patch '/cart', :to => 'carts#update'
@@ -54,5 +53,7 @@ Rails.application.routes.draw do
   get  "/settings",           to: 'developer#new'
   get  "/settings/developer", to: 'developer#show'
   post "/settings/developer", to: 'developer#create'
+
+  patch '/stores', to: 'stores#update'
 
 end
