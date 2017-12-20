@@ -25,6 +25,10 @@ gem 'figaro'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'active_model_serializers', '0.9.3'
 gem 'stripe'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 gem 'paperclip-cloudinary'
 
 group :development, :test do
