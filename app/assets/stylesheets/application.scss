@@ -1,8 +1,19 @@
 @import "bootstrap";
-@import "custom";
 @import 'jquery-ui/core.css';
 @import 'jquery-ui/datepicker.css';
 @import 'jquery-ui/theme.css';
+@import "custom";
+
+body {
+    background-color: BlanchedAlmond;
+}
+
+.card {
+    background-color: #fff3e2;
+    border-radius: 4px;
+    padding-top: 8px;
+    margin-bottom: 10px;
+}
 
 .search {
   width: 200px;
@@ -61,4 +72,53 @@
     font-weight: normal;
     line-height: 18px;
     color: #555555
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #e5bf85;
+  padding: 5px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #e5bf85;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  left: 20em;
+  width: 90px;
+  height: 36px;
+  border: 1px solid white;
+  background: #e5bf85;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.popItemsWrapper {
+    margin-top: 5em;
 }
