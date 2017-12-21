@@ -76,7 +76,9 @@ body {
 
 .search {
   width: 100%;
-  position: relative
+  display: flex;
+  justify-content: space-around;
+  position: relative;
 }
 
 .searchTerm {
@@ -95,9 +97,8 @@ body {
 }
 
 .searchButton {
-  position: absolute;  
   right: -50px;
-  left: 20em;
+  left: 22em;
   width: 90px;
   height: 36px;
   border: 1px solid white;
