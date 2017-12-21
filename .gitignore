@@ -23,6 +23,5 @@
 # Ignore secrets.yml file
 
 # Ignore application configuration
-/config/application.yml
 notes.md
 
